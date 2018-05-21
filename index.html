@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <title>Demo webRTC</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">webRTC</a>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Reception</h2>
+                <video id="js-receiver-video" width="100%" height="400px"></video>
+                <p>
+                    <button id="js-start" class="btn btn-primary">Demarrer la conversation</button>
+                </p>
+                <hr>
+                <h4>Offre recue</h4>
+                <div class="form-group">
+                    <textarea id="js-offer" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+
+                <hr>
+                <div class="form-group">
+                    <form id="js-offerForm">
+                        <p>
+                            <textarea id="offerContent" class="form-control" cols="30" rows="10"></textarea>
+                        </p>
+                        <button type="submit" class="btn btn-primary">Enregistrer l'offre</button>
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <h2>Emission</h2>
+                <video controls id="js-emitter-video" width="100%" height="400px"></video>
+                <p>
+                    <button id="js-accept" class="btn btn-primary">Accepter la conversation</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="simplerpeer.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
