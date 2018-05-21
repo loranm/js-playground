@@ -3,13 +3,10 @@ const app = express();
 const http = require('http').createServer(app);
 const io = require('socket.io').listen(http);
 const port = 8080
-const helmet = require('helmet')
 // on intègre socketIo
 const socketManager = require('./websocket/socket-manager')(io);
 
 require('./startup/routes')(app, express)
-
-app.use(helmet());
 
 /***********************************************************
 Lancement du server
